@@ -12,7 +12,7 @@ const http = require("http").Server(app);
 // require the socket.io module
 const io = require("socket.io");
 
-const port = 5000;
+const port = 3000;
 
 //bodyparser middleware
 app.use(bodyParser.json());
@@ -68,6 +68,6 @@ socket.on("connection", socket => {
   });
 });
 
-http.listen(port, () => {
+http.listen(port, '0.0.0.0', () => {
   console.log("Running on Port: " + port);
 });
